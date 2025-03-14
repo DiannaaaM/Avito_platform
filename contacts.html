@@ -7,40 +7,41 @@
     <title>Контакты</title>
 </head>
 <body>
-    <aside style="width: 20%; height: 100vh; background-color:rgb(40, 40, 40); float:left; margin-right: 1.5em;">
-        <p style="text-align:center; color: white; margin-top: 5%;">Меню</p>
-        <div>
-            <ul style="color: white;" >
-                <li><a href="main.html">Главная</a></li>
-                <li style="background-color: dodgerblue; border-radius:5px;"><a href="category.html">Категории</a></li>
-                <li>Заказы</li>
-                <li style="background-color: dodgerblue; border-radius:5px;"><a href="contacts.html">Контакты</a></li>
-            </ul>
+<aside style="width: 20%; height: 100vh; background-color:rgb(40, 40, 40); float:left; margin-right: 1.5em;">
+    <p style="text-align:center; color: white; margin-top: 5%;">Меню</p>
+    <div>
+        <ul style="color: white;">
+            <li><a href="main.html">Главная</a></li>
+            <li style="background-color: dodgerblue; border-radius:5px;"><a href="category.html">Категории</a></li>
+            <li>Заказы</li>
+            <li style="background-color: dodgerblue; border-radius:5px;"><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+    <p style="margin-left: 35px; font-weight: bolder; color: white; position: absolute; bottom: 0px;">
+        Пользователь
+    </p>
+</aside>
+<main>
+    <h2 style="padding-top: 10vh; text-align: center;">Контакты</h2>
+    <div style="display: grid; border: 0.5px solid lightgray; margin: 1.5em; padding:5vh; max-width: 30vw;">
+        <label for="name" class="form-label" style="font-weight: 470; justify-self: flex-start;">Имя</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="name">
         </div>
-        <p style="margin-left: 35px; font-weight: bolder; color: white; position: absolute; bottom: 0px;">
-            Пользователь
-        </p>
-    </aside>
-    <main>
-        <h2 style="padding-top: 10vh; text-align: center;">Контакты</h2>
-        <div style="display: grid; border: 0.5px solid lightgray; margin: 1.5em; padding:5vh; max-width: 30vw;">
-            <label for="name" class="form-label" style="font-weight: 470; justify-self: flex-start;">Имя</label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" id="name">
-            </div>
-            <label for="basic-addon1" class="form-label" style="font-weight: 470; justify-self: flex-start;">Почта</label>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">@</span>
-                <input type="text" class="form-control">
-            </div>
-            <label for="idk" class="form-label" style="font-weight: 470; justify-self: flex-start;">Сообщение</label>
-            <div class="input-group">
-                <textarea class="form-control" id="idk"></textarea>
-            </div>
-            <button type="button" class="btn btn-primary" style="margin-top: 2vh; float: left; max-width: 10vw;">Отправить</button>
+        <label for="basic-addon1" class="form-label" style="font-weight: 470; justify-self: flex-start;">Почта</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control">
         </div>
-        <h5>Наши контакты</h5>
-        <p>qwerty@qwerty.qw</p>
-    </main>
+        <label for="idk" class="form-label" style="font-weight: 470; justify-self: flex-start;">Сообщение</label>
+        <div class="input-group">
+            <textarea class="form-control" id="idk"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" style="margin-top: 2vh; float: left; max-width: 10vw;">Отправить
+        </button>
+    </div>
+    <h5>Наши контакты</h5>
+    <p>qwerty@qwerty.qw</p>
+</main>
 </body>
 </html>

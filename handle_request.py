@@ -3,7 +3,15 @@ from typing import Tuple, Any
 import os
 
 hostName = "localhost"
-serverPort = 8080
+import http.server
+import socketserver
+
+PORT = 8000
+
+Handler = http.server.SimpleHTTPRequestHandler
+
+with socketserver.TCPServer(("", PORT), Handler) as httpd:
+    httpd.serve_forever()
 
 
 class MyServer(BaseHTTPRequestHandler):

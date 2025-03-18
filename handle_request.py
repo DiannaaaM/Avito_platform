@@ -1,18 +1,9 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
-from typing import Tuple, Any
 import os
+import socketserver
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
 hostName = "localhost"
-import http.server
-import socketserver
-
 PORT = 8000
-
-Handler = http.server.SimpleHTTPRequestHandler
-
-with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    httpd.serve_forever()
-
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -33,14 +24,9 @@ class MyServer(BaseHTTPRequestHandler):
         except FileNotFoundError:
             self.send_error(404, f'File Not Found: {self.path}')
 
-
-def create_handler(*args: Tuple[Any, ...]) -> BaseHTTPRequestHandler:
-    return MyServer(*args)
-
-
 if __name__ == "__main__":
-    webServer = HTTPServer((hostName, serverPort), create_handler)
-    print(f"Server started http://{hostName}:{serverPort}")
+    webServer = HTTPServer((hostName, PORT), MyServer)
+    print(f"Server started at http://{hostName}:{PORT}")
 
     try:
         webServer.serve_forever()
